@@ -11,14 +11,15 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../../../static/css/style.css" />
   </head>
-  <body class="m-5">
-    <div class="container ">
+  <body>
+    <div class="container-fluid ab">
       <div class="row justify-content-center">
 
         <div class="col-md-4">
-          <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
-          <div class="card">
+          <!-- <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a> -->
+          <div class="card mt-5">
             <form method='POST' action="" enctype="multipart/form-data">
               {% csrf_token %}
 
@@ -52,6 +53,7 @@
               </div>
 
               <button type='submit' class="btn btn-primary m-3">Submit</button>
+              <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
 
           </form>
           </div>
