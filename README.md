@@ -16,9 +16,20 @@
 
 <p>this is my personal gallary website that adds different kind of photos by category and displays in the home page</p>
 
-![project101!](./src/assets/images/project101.png)
+## Home Page
 
-![project101!](./src/assets/images/projectpage.png)
+![project101!](../jango-project-one/photoshare/static/pics/gallaryss.png)
+
+
+## Description page
+
+
+![project101!](../jango-project-one/photoshare/static/pics/gallaryss2.png)
+
+## Category Page
+
+
+![project101!](../jango-project-one/photoshare/static/pics/gallaryss3.png)
 
 ## Istallation
 
