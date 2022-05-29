@@ -2,7 +2,6 @@
 
 ### By Elijah Mwangi Wangu.
 
-## it is a website allows you to search for you github account and repositories.
 
 ## Table of content.
 
@@ -15,7 +14,7 @@
 
 ## Description
 
-<p>it is a website allows you to search for you github account and repositories making work easier for the user.</p>
+<p>this is my personal gallary website that adds different kind of photos by category and displays in the home page</p>
 
 ![project101!](./src/assets/images/project101.png)
 
