@@ -16,6 +16,6 @@ class CategoryTestCase(TestCase):
         self.assertTrue(len(all_categories) > 0)
         
     def test_search_category(self):
-        self.catego.save_category()
+        self.category.save_category()
         images = Category.objects.filter(category__icontains='person')
         self.assertTrue(self.category, images)
