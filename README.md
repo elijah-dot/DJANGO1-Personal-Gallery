@@ -26,7 +26,7 @@
 
 ![project101!](./photoshare/static/pics/gallaryss2.png)
 
-## Category Page
+## Category Page(Food)
 
 
 ![project101!](./photoshare/static/pics/gallaryss3.png)
