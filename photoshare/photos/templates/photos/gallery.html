@@ -18,12 +18,14 @@
     <div class="display">
 
       <div class="container-fluid" id="hide">
-        <form class="d-flex">
+        <form class="d-flex" method="POST" action="">
+          {% csrf_token %}
             <input
               class="form-control m-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
+              name="searched"
             />
             <button class="btn btn-outline-success m-2" type="submit">
               Search
@@ -67,6 +69,7 @@
                     class="btn btn-outline-dark btn-sm m-1"
                     >view</a
                   >
+                  
                 </div>
               </div>
               {% empty %}

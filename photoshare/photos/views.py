@@ -44,3 +44,22 @@ def addPhoto(request):
     context = { 'categories': categories}
     return render(request, 'photos/add.html',context)
 
+def delete(request,category):
+    photo = Photo.objects.get(id=category)
+    photo.delete()
+    # category = Category.objects.all().filter(category=category).first()
+    # category.delete()
+    
+    return redirect('gallery')
+
+# def search_category(request):
+#     if request.method == 'POST':
+#         searched=request.POST('searched')
+#         return render(request, 'photos/search_categories.html',{'searched':searched})
+#     else:
+#        return render(request, 'photos/search_categories.html') 
+        
+    
+#     return render(request, 'photos/search_categories.html')
+    
+
