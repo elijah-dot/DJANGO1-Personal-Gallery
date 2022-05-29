@@ -18,18 +18,18 @@
 
 ## Home Page
 
-![project101!](../jango-project-one/photoshare/static/pics/gallaryss.png)
+![project101!](./photoshare/static/pics/gallaryss.png)
 
 
 ## Description page
 
 
-![project101!](./photoshare/static/pics/gallaryss.png)
+![project101!](./photoshare/static/pics/gallaryss2.png)
 
 ## Category Page
 
 
-![project101!](../jango-project-one/photoshare/static/pics/gallaryss3.png)
+![project101!](./photoshare/static/pics/gallaryss3.png)
 
 ## Istallation
 
