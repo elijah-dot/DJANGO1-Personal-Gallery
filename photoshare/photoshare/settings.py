@@ -15,20 +15,20 @@ from pathlib import Path
 import os
 import django_on_heroku
 import dj_database_url
-from decouple import config
+from decouple import config,Csv
 
-MODE=config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
+MODE='dev'
+SECRET_KEY = 'good'
 DEBUG = config('DEBUG', default=False, cast=bool)
 # development
-if config('MODE')=="dev":
+if MODE=="dev":
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-           'NAME': config('DB_NAME'),
-           'USER': config('DB_USER'),
-           'PASSWORD': config('DB_PASSWORD'),
-           'HOST': config('DB_HOST'),
+           'NAME': 'picture',
+           'USER': 'moringa',
+           'PASSWORD': 'eli',
+           'HOST': '127.0.0.1',
            'PORT': '',
        }
        
@@ -44,23 +44,20 @@ else:
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
-
-
-
+ALLOWED_HOSTS = '.localhost', '.herokuapp.com', '.127.0.0.1'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-rkq=ubqlle@kfxlkh*riuv%mf562dv=r=kgkblfji%8+k=x%#z'
+SECRET_KEY = 'django-insecure-f!py0i#77-modaws%s=9fdc%1&4r(pzfw_z5l1x4=gczd*u@ne'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -78,6 +75,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -85,7 +83,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'photoshare.urls'
@@ -146,7 +144,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Nairobi'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
