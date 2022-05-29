@@ -24,7 +24,7 @@
 ## Description page
 
 
-![project101!](../jango-project-one/photoshare/static/pics/gallaryss2.png)
+![project101!](./photoshare/static/pics/gallaryss.png)
 
 ## Category Page
 
