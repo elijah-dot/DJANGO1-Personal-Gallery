@@ -35,7 +35,7 @@
 
 <ul>
    <li>go to a location of your liking in your file system choose a root folder and clone this repository <br>
-   https://github.com/elijah-dot/Angular-project-Github
+   https://github.com/elijah-dot/DJANGO1-Personal-Gallery
    </li>
    <li>open a code editor.any will work.</li>
 </ul>
@@ -48,7 +48,7 @@
 
 ### Installation process
 
-[Go back to the top](#LIONGIT)
+[Go back to the top](#DJANGO1-Personal-Gallery)
 
 ## Technology used
 
@@ -56,20 +56,23 @@
 <li>Html - which was used to build the structure of the pages</li>
 <li>css- which was used to style the pages </li>
 <li>bootstrap-which was used to make pages and images responsive</li>
-<li>Angular-which was used to make the all the html components an also to style as framework.</li>
-
+<li>Django-which was used to give logic to the website</li>
 </ul>
 
 ## Behaviour Drriven Development
 
 <ol>
-<li>displays a landingpage with a quick description of the website </li>
-<li>Displays form for entering name,email and text <ul>
-<li>INPUT:"Users username in git hub"</li>
+<li>displays all the photos with defferent categories</li>
+<li>Displays form for new_category,description,existing categories and file.<ul>
+<li>INPUT:"description"</li>
+<li>INPUT:"existing categories"</li>
+<li>INPUT:"file to be displayed as photo"</li>
+<li>INPUT:"new_category"</li>
+<li>INPUT:"submit"</li>
 
-<li>OUTPUT:"Displays user repositories and account.</li>
+<li>OUTPUT:"Displays users photo.</li>
 
-</ul> </li>
+</ul> 
 </ol>
 
 ## Development
@@ -86,12 +89,12 @@
 
 ## licence
 
-copyright (c) [2019] [https://github.com/elijah-dot/Angular-project-Github/blob/master/LICENSE]
+copyright (c) [2019] [https://github.com/elijah-dot/DJANGO1-Personal-Gallery/blob/master/LICENSE]
 
 ## authors info
 
 linked - [Elijah Mwangi Wangu]
-(https://github.com/elijah-dot/Angular-project-Github)
+(https://github.com/elijah-dot/DJANGO1-Personal-Gallery)
 
 email - [Elijah Mwangi Wangu]
 (elijahwangu91@gmail.com
