@@ -110,14 +110,14 @@ WSGI_APPLICATION = 'photoshare.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'picture',
-        'USER': 'moringa',
-    'PASSWORD':'eli',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'picture',
+#         'USER': 'moringa',
+#     'PASSWORD':'eli',
+#     }
+# }
 
 
 # Password validation
