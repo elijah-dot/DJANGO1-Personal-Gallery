@@ -17,18 +17,18 @@ import django_on_heroku
 import dj_database_url
 from decouple import config,Csv
 
-MODE='dev'
-SECRET_KEY = 'good'
+MODE=config("MODE", default="dev")
+SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 # development
-if MODE=="dev":
+if config('MODE')=="dev":
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-           'NAME': 'picture',
-           'USER': 'moringa',
-           'PASSWORD': 'eli',
-           'HOST': '127.0.0.1',
+           'NAME': config('DB_NAME'),
+           'USER': config('DB_USER'),
+           'PASSWORD': config('DB_PASSWORD'),
+           'HOST': config('DB_HOST'),
            'PORT': '',
        }
        
@@ -47,19 +47,20 @@ DATABASES['default'].update(db_from_env)
 ALLOWED_HOSTS = '.localhost', '.herokuapp.com', '.127.0.0.1'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f!py0i#77-modaws%s=9fdc%1&4r(pzfw_z5l1x4=gczd*u@ne'
+# SECRET_KEY = 'django-insecure-f!py0i#77-modaws%s=9fdc%1&4r(pzfw_z5l1x4=gczd*u@ne'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -154,20 +155,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
+
 STATIC_URL = 'static/'
 MEDIA_URL = '/images/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS =[
+    BASE_DIR /'static'
+]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+# MEDIA_ROOT = BASE_DIR /'static/images'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+# STATIC_ROOT = BASE_DIR /'staticfiles'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_on_heroku.settings(locals())
+django_heroku.settings(locals())
